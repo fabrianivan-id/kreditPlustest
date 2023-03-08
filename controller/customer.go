@@ -2,7 +2,7 @@ package auth
 
 import (
 	echo "github.com/labstack/echo/v4"
-	"kreditPlus-test/model"
+	model "kreditPlus-test/model"
 	"net/http"
 )
 
@@ -30,7 +30,6 @@ type RegisterCustomerRequest struct {
 	Password    string `json:"password" form:"password"`
 }
 
-
 // ------------------------------------------------------------------
 // End Request
 // ------------------------------------------------------------------
@@ -39,7 +38,7 @@ type CustomerController struct {
 	customerModel model.CustomerModel
 }
 
-func NewCustomerController(userModel model.CustomerModel) *CustomerController {
+func NewCustomerController(customerModel model.CustomerModel) *CustomerController {
 	return &CustomerController{
 		customerModel,
 	}
@@ -59,8 +58,9 @@ func (controller *CustomerController) RegisterUserController(c echo.Context) err
 			})
 		}
 	*/
-	customer := models.Customer{
-		PhoneNumber: customerRequest.
+	customer := model.Customer{
+		PhoneNumber: customerRequest.PhoneNumber,
+		Password:    customerRequest.Password,
 	}
 	/*if user.Name == "" || user.Email == "" || user.Password == "" || user.Address == "" || user.Gender == "" || user.Role == "" {
 		return c.JSON(http.StatusBadRequest, map[string]interface{}{

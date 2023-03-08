@@ -33,7 +33,7 @@ func NewCustomerModel(db *gorm.DB) *GormCustomerModel {
 	return &GormCustomerModel{db: db}
 }
 
-type UserModel interface {
+type CustomerModel interface {
 	Register(Customer) (Customer, error)
 	Login(no_hp, password string) (Customer, error)
 	GetUserData(userId int) (Customer, error)
