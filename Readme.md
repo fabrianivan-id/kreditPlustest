@@ -18,4 +18,4 @@ Sebagai contoh, layanan manajemen data konsumen dapat memiliki tabel konsumen ya
 
 Dalam struktur database, ACID dapat dipenuhi dengan menggunakan teknologi database yang mendukung transaksi seperti PostgreSQL atau MySQL.
 
-Demikianlah panduan umum mengenai arsitektur aplikasi dan struktur database yang dapat digunakan dalam studi kasus ini. Mohon maaf tidak bisa memberikan kode langsung karena itu membutuhkan pemahaman mendalam mengenai kebutuhan bisnis dan teknologi yang tersedia.
+![ERD](https://github.com/fabrianivan21/kreditPlustest/blob/main/ER%20diagram.png)
