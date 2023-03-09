@@ -1,4 +1,4 @@
-package auth
+package controller
 
 import (
 	echo "github.com/labstack/echo/v4"

@@ -10,4 +10,11 @@ type LoanLimit struct {
 	UserID   uint
 	Limit    int
 	Duration time.Duration
+	Status   uint
+}
+
+type LoanLimitModel interface {
+	CreateLoanLimit(limit LoanLimit) (LoanLimit, error)
+	GetLoanLimit(userID uint) (LoanLimit, error)
+	UpdateLoanLimit(limit LoanLimit) (LoanLimit, error)
 }

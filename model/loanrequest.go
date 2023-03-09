@@ -4,7 +4,14 @@ import "gorm.io/gorm"
 
 type LoanRequest struct {
 	gorm.Model
-	UserID          uint `json:"token" form:"token"`
+	UserID          uint
 	RequestedAmount int
-	Status          string
+	Status          uint
+}
+
+type LoanRequestModel interface {
+	CreateLoanRequest(request LoanRequest) (LoanRequest, error)
+	GetLoanRequestsByUserID(userID uint) ([]LoanRequest, error)
+	GetLoanRequest(requestID uint) (LoanRequest, error)
+	UpdateLoanRequest(request LoanRequest) (LoanRequest, error)
 }

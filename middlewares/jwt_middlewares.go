@@ -26,7 +26,6 @@ func LoggerMiddlewares(e *echo.Echo) {
 }
 
 func ExtractTokenUser(c echo.Context) (uint, string) {
-
 	// fmt.Println(c.Get("user"))
 	// if temp := c.Get("user"); temp != nil {
 
